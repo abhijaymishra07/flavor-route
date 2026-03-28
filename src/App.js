@@ -1,65 +1,44 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import RestaurantCard from "./components/RestaurantCard";
-import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 import BillCalculator from "./components/BillCalculator";
 import SignaturePad from "./components/SignaturePad";
-import Footer from "./components/Footer";
-import data from "./data/restaurants.json";
+
+import Home from "./pages/Home";
+import Explore from "./pages/Explore";
+import Contact from "./pages/Contact";
+import Favorites from "./pages/Favorites";
+
+import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
-  const [restaurants, setRestaurants] = useState(data);
-
-  const [filters, setFilters] = useState({
-    type: "",
-    cuisine: [],
-    sort: ""
-  });
-
-  const applyFilters = () => {
-    let filtered = [...data];
-
-    if (filters.type) {
-      filtered = filtered.filter(r => r.type === filters.type);
-    }
-
-    if (filters.cuisine.length > 0) {
-      filtered = filtered.filter(r =>
-        filters.cuisine.includes(r.cuisine)
-      );
-    }
-
-    if (filters.sort === "price") {
-      filtered.sort((a, b) => a.price - b.price);
-    } else if (filters.sort === "rating") {
-      filtered.sort((a, b) => b.rating - a.rating);
-    }
-
-    setRestaurants(filtered);
-  };
+  const [search, setSearch] = useState("");
+  const [dark, setDark] = useState(false);
+  const [favorites, setFavorites] = useState([]);
 
   return (
-    <div>
-      <Navbar />
+    <div className={dark ? "dark" : ""}>
+      <Navbar setSearch={setSearch} setDark={setDark} dark={dark} />
 
-      <div className="container">
-        <Sidebar
-          filters={filters}
-          setFilters={setFilters}
-          applyFilters={applyFilters}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/explore"
+          element={
+            <Explore
+              search={search}
+              favorites={favorites}
+              setFavorites={setFavorites}
+            />
+          }
         />
-
-        <div className="content">
-          {restaurants.length === 0 ? (
-            <h2>No restaurants found</h2>
-          ) : (
-            restaurants.map(r => (
-              <RestaurantCard key={r.id} restaurant={r} />
-            ))
-          )}
-        </div>
-      </div>
+        <Route path="/contact" element={<Contact />} />
+        <Route 
+  path="/favorites" 
+  element={<Favorites favorites={favorites} setFavorites={setFavorites} />} 
+/>
+      </Routes>
 
       <BillCalculator />
       <SignaturePad />

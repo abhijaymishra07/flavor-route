@@ -139,3 +139,64 @@ canvas {
   border: none;
   cursor: pointer;
 }
+.nav-center a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-center a:hover {
+  color: #f4a261;
+}
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-center a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.dark {
+  background: #111;
+  color: white;
+}
+
+.dark .card {
+  background: #222;
+}
+
+.cuisine {
+  color: #777;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.rating {
+  color: orange;
+}
+/* DARK MODE FIX FOR SIDEBAR */
+.dark .sidebar {
+  background: #222;
+  color: white;
+}
+
+/* Fix inputs, labels inside sidebar */
+.dark .sidebar input,
+.dark .sidebar select,
+.dark .sidebar button {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+/* Fix text */
+.dark .sidebar h3,
+.dark .sidebar h4,
+.dark .sidebar label {
+  color: white;
+}
