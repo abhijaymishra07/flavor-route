@@ -34,10 +34,7 @@ function App() {
           }
         />
         <Route path="/contact" element={<Contact />} />
-        <Route 
-  path="/favorites" 
-  element={<Favorites favorites={favorites} setFavorites={setFavorites} />} 
-/>
+        <Route path="/favorites" element={<Favorites favorites={favorites} />} />
       </Routes>
 
       <BillCalculator />

@@ -116,14 +116,38 @@ canvas {
 .card p:nth-child(4) {
   margin: 5px 10px;
   color: #000;
-  font-weight: bold;  
+  font-weight: bold;  /* 🔥 important */
 }
 
 /* RATING */
 .card p:nth-child(5) {
   margin: 5px 10px;
-  color: #f4a261;    
+  color: #f4a261;     /* 🔥 highlight color */
   font-weight: 500;
+}
+.cuisine {
+  color: #777;
+  font-size: 14px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.rating {
+  color: #f4a261;
+}
+.cuisine {
+  color: #777;
+  font-size: 14px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.rating {
+  color: #f4a261;
 }
 .calc input {
   padding: 6px;
@@ -139,7 +163,44 @@ canvas {
   border: none;
   cursor: pointer;
 }
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-right input {
+  padding: 5px;
+}
+
+.dark {
+  background: #111;
+  color: white;
+}
+
+.dark .card {
+  background: #222;
+}
+
+.cuisine {
+  color: #777;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.rating {
+  color: orange;
+}
 .nav-center a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-center a:hover {
+  color: #f4a261;
+}.nav-center a {
   margin: 0 15px;
   text-decoration: none;
   color: white;
@@ -179,24 +240,108 @@ canvas {
 .rating {
   color: orange;
 }
-/* DARK MODE FIX FOR SIDEBAR */
+/* --- SIDEBAR LIGHT MODE (DEFAULT) --- */
+.sidebar {
+  width: 250px;
+  background: #ffffff; /* White background for light mode */
+  padding: 20px;
+  border-right: 1px solid #e0e0e0;
+  min-height: calc(100vh - 70px);
+  color: #333;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.category-item {
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.category-item:hover {
+  background: #f0f0f0;
+}
+
+.category-item.active {
+  background-color: #ff5722;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+  margin: 20px 0;
+}
+
+.filter-group {
+  margin-bottom: 15px;
+}
+
+.filter-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+  color: #555;
+  cursor: pointer;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  outline: none;
+}
+
+/* --- SIDEBAR DARK MODE OVERRIDES --- */
 .dark .sidebar {
+  background-color: #0a0a0a;
+  border-right: 1px solid #333;
+  color: #fff;
+}
+
+.dark .category-item {
+  color: #a0a0a0;
+}
+
+.dark .category-item:hover {
   background: #222;
-  color: white;
 }
 
-/* Fix inputs, labels inside sidebar */
-.dark .sidebar input,
-.dark .sidebar select,
-.dark .sidebar button {
-  background: #333;
-  color: white;
-  border: 1px solid #555;
+.dark .category-item.active {
+  background-color: #ff5722;
+  color: #fff;
 }
 
-/* Fix text */
-.dark .sidebar h3,
-.dark .sidebar h4,
-.dark .sidebar label {
-  color: white;
+.dark .divider {
+  border-top: 1px solid #333;
+}
+
+.dark .filter-group label {
+  color: #a0a0a0;
+}
+
+.dark .filter-group select {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
 }
