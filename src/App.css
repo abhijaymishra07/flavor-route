@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f5f5f5;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  color: white;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-left {
+  font-weight: bold;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-center span {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  margin-top: 70px;
+}
+
+.sidebar {
+  width: 250px;
+  background: white;
+  padding: 20px;
+}
+
+/* GRID */
+.content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARD */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card button {
+  margin: 10px;
+  padding: 8px;
+  background: black;
+  color: white;
+  border: none;
+}
+
+/* CALC */
+.calc {
+  padding: 20px;
+}
+
+/* CANVAS */
+canvas {
+  border: 2px solid black;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: black;
+  color: white;
+}
+/* CARD TEXT IMPROVEMENT */
+
+.card h3 {
+  margin: 10px;
+  font-size: 18px;
+  color: #222;
+}
+
+/* CUISINE */
+.card p:nth-child(3) {
+  margin: 5px 10px;
+  color: #777;        /* 🔥 light grey */
+  font-size: 14px;
+}
+
+/* PRICE */
+.card p:nth-child(4) {
+  margin: 5px 10px;
+  color: #000;
+  font-weight: bold;  
+}
+
+/* RATING */
+.card p:nth-child(5) {
+  margin: 5px 10px;
+  color: #f4a261;    
+  font-weight: 500;
+}
+.calc input {
+  padding: 6px;
+  margin-top: 5px;
+  width: 200px;
+}
+
+.calc button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
