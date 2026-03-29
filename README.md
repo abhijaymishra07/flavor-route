@@ -1,37 +1,28 @@
 # 🍽️ FlavorRoute
 
-FlavorRoute is a modern web application built using React that helps users explore restaurants, apply filters, and perform utility tasks like bill calculation and digital signature.
+FlavorRoute is a modern web application built using React that helps users explore restaurants, apply filters, and perform utility tasks like bill calculation and digital signature. 
 
 This project was developed as part of a Web Programming coursework to demonstrate practical implementation of frontend technologies and interactive UI design.
 
 ---
 
+## 🌍 Live Demo
+
+**[👉 Click here to view FlavorRoute live!](https://flavorroute.vercel.app)**
+
+---
+
 ## 🚀 Features
 
-* 🔍 **Restaurant Exploration**
-  Browse a list of restaurants with details like cuisine, price, and ratings.
-
-* 🎯 **Filtering System**
-  Filter restaurants based on:
-
+* 🔍 **Restaurant Exploration:** Browse a list of restaurants with details like cuisine, price, and ratings.
+* 🎯 **Filtering System:** Filter restaurants based on:
   * Type (Veg / Non-Veg)
   * Cuisine
   * Sorting (Price / Rating)
-
-* 🧮 **Group Bill Calculator**
-  Calculate total bill based on number of people and cost per person using JavaScript logic.
-
-* ✍️ **Digital Signature Pad**
-  Draw signatures using HTML5 Canvas and mouse events.
-
-* 🧭 **Multi-Page Navigation**
-  Includes Home, Explore, and Contact pages using React Router.
-
-* 🎨 **Responsive UI**
-  Clean and modern interface using CSS Grid and Flexbox.
-
-* 🌐 **Deployed Application**
-  Hosted online for public access.
+* 🧮 **Group Bill Calculator:** Calculate total bill based on number of people and cost per person using JavaScript logic.
+* ✍️ **Digital Signature Pad:** Draw signatures using HTML5 Canvas and mouse events.
+* 🧭 **Multi-Page Navigation:** Includes Home, Explore, and Contact pages using React Router.
+* 🎨 **Responsive UI:** Clean and modern interface using CSS Grid and Flexbox.
 
 ---
 
@@ -49,7 +40,7 @@ This project was developed as part of a Web Programming coursework to demonstrat
 
 ## 📂 Project Structure
 
-```
+```text
 flavorroute/
 │
 ├── public/
@@ -77,9 +68,6 @@ flavorroute/
 │   └── index.js
 │
 └── package.json
-```
-
----
 
 ## ⚙️ How to Run Locally
 
