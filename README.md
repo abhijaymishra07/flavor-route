@@ -68,3 +68,67 @@ flavorroute/
 │   └── index.js
 │
 └── package.json
+
+## ⚙️ How to Run Locally
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/your-username/flavorroute.git
+   ```
+
+2. Navigate to the project folder:
+
+   ```
+   cd flavorroute
+   ```
+
+3. Install dependencies:
+
+   ```
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```
+   npm start
+   ```
+
+5. Open in browser:
+
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+## 🌍 Live Demo
+
+👉 https://flavorroute.vercel.app
+
+---
+
+## 🎓 Learning Outcomes
+
+* Built a complete React-based web application
+* Implemented component-based architecture
+* Used JavaScript concepts like loops, events, and array methods
+* Worked with forms, DOM interactions, and Canvas API
+* Learned deployment using Vercel
+
+---
+
+## 👨‍💻 Author
+
+**Abhijay Mishra**
+B.Tech CSE Core
+
+---
+
+## 📌 Note
+
+This project is created for academic purposes and demonstrates core web development concepts along with modern frontend practices.
+
+---
+
