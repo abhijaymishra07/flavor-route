@@ -1,8 +1,8 @@
 # 🍽️ FlavorRoute
 
-FlavorRoute is a modern web application built using React that helps users explore restaurants, apply filters, and perform utility tasks like bill calculation and digital signature. 
+FlavorRoute is a modern, interactive web application built using React that enables users to explore restaurants, apply smart filters, and use utility tools such as a bill calculator and digital signature pad.
 
-This project was developed as part of a Web Programming coursework to demonstrate practical implementation of frontend technologies and interactive UI design.
+This project was developed as part of a Web Programming coursework to demonstrate practical implementation of frontend development concepts, component-based architecture, and dynamic user interaction.
 
 ---
 
@@ -14,27 +14,28 @@ This project was developed as part of a Web Programming coursework to demonstrat
 
 ## 🚀 Features
 
-* 🔍 **Restaurant Exploration:** Browse a list of restaurants with details like cuisine, price, and ratings.
-* 🎯 **Filtering System:** Filter restaurants based on:
-  * Type (Veg / Non-Veg)
-  * Cuisine
-  * Sorting (Price / Rating)
-* 🧮 **Group Bill Calculator:** Calculate total bill based on number of people and cost per person using JavaScript logic.
-* ✍️ **Digital Signature Pad:** Draw signatures using HTML5 Canvas and mouse events.
-* 🧭 **Multi-Page Navigation:** Includes Home, Explore, and Contact pages using React Router.
-* 🎨 **Responsive UI:** Clean and modern interface using CSS Grid and Flexbox.
+* 🔍 **Restaurant Exploration:** Browse curated restaurant listings with key details such as cuisine type, pricing, and ratings.  
+* 🎯 **Advanced Filtering System:** Easily refine results using:  
+  * Type (Veg / Non-Veg)  
+  * Cuisine category  
+  * Sorting options (Price / Rating)  
+* 🧮 **Bill Calculator:** Calculate per-person cost by entering total bill and number of people.  
+* ✍️ **Digital Signature Pad:** Create and draw signatures using HTML5 Canvas with smooth mouse interactions.  
+* 🧭 **Multi-Page Navigation:** Seamless navigation across Home, Explore, Favorites, and Contact pages using React Router.  
+* ⭐ **Favorites System:** Save and manage preferred restaurants dynamically.  
+* 🎨 **Responsive UI Design:** Clean and adaptive layout built with modern CSS techniques like Flexbox and Grid.  
 
 ---
 
 ## 🛠️ Technologies Used
 
-* **HTML5** – Structure of the application
-* **CSS3** – Styling and layout
-* **JavaScript (ES6)** – Logic and interactivity
-* **ReactJS** – Component-based architecture
-* **React Router** – Page navigation
-* **JSON** – Data handling
-* **Vercel** – Deployment
+* **HTML5** – Application structure  
+* **CSS3** – Styling and responsiveness  
+* **JavaScript (ES6)** – Core logic and interactivity  
+* **ReactJS** – Component-based frontend framework  
+* **React Router** – Client-side navigation  
+* **JSON** – Data handling  
+* **Vercel** – Deployment platform  
 
 ---
 
@@ -58,6 +59,7 @@ flavorroute/
 │   ├── pages/
 │   │   ├── Home.js
 │   │   ├── Explore.js
+│   │   ├── Favorites.js
 │   │   └── Contact.js
 │   │
 │   ├── data/
@@ -68,66 +70,60 @@ flavorroute/
 │   └── index.js
 │
 └── package.json
+```
+# Clone the repository
+git clone https://github.com/your-username/flavorroute.git
 
-## ⚙️ How to Run Locally
+# Navigate into the project folder
+cd flavorroute
 
-1. Clone the repository:
+# Install dependencies
+npm install
 
-   ```
-   git clone https://github.com/your-username/flavorroute.git
-   ```
+# Start the development server
+npm start
 
-2. Navigate to the project folder:
+## 💡 How It Works
 
-   ```
-   cd flavorroute
-   ```
+FlavorRoute is built using a component-based architecture in React, where each part of the UI is divided into reusable components such as Navbar, Sidebar, and Restaurant Cards.
 
-3. Install dependencies:
+The application manages dynamic behavior using React Hooks:
 
-   ```
-   npm install
-   ```
+- **useState** is used to manage user inputs like search queries, filters, and favorites.  
+- **useEffect** is used to update the displayed restaurant list whenever filters or search values change.  
 
-4. Start the development server:
+Restaurant data is stored in a local JSON file and rendered dynamically. Based on user interaction:
 
-   ```
-   npm start
-   ```
+- Filters refine the restaurant list  
+- Sorting organizes results based on price or rating  
+- Search allows quick lookup of restaurants by name  
 
-5. Open in browser:
+Navigation between pages is handled using React Router, enabling a smooth single-page application experience without full page reloads.
 
-   ```
-   http://localhost:3000
-   ```
-
----
-
-## 🌍 Live Demo
-
-👉 https://flavorroute.vercel.app
+Additional features like the Bill Calculator and Signature Pad are implemented using JavaScript logic and HTML5 Canvas to enhance interactivity.
 
 ---
 
-## 🎓 Learning Outcomes
+## 🎯 Learning Outcomes
 
-* Built a complete React-based web application
-* Implemented component-based architecture
-* Used JavaScript concepts like loops, events, and array methods
-* Worked with forms, DOM interactions, and Canvas API
-* Learned deployment using Vercel
+Through this project, the following concepts were implemented and strengthened:
+
+- Understanding of component-based architecture in React  
+- State management using React Hooks (`useState`, `useEffect`)  
+- Client-side routing using React Router  
+- Dynamic rendering of data from JSON  
+- Building responsive layouts using CSS (Flexbox & Grid)  
+- Implementing interactive features using JavaScript  
 
 ---
 
-## 👨‍💻 Author
+## 🧑‍💻 Author
 
-**Abhijay Mishra**
-B.Tech CSE Core
+**Abhijay Mishra**  
+BTech CSE Core – VIT Vellore  
 
 ---
 
 ## 📌 Note
 
-This project is created for academic purposes and demonstrates core web development concepts along with modern frontend practices.
-
----
+This project was developed for academic purposes and demonstrates practical frontend development skills using modern web technologies.
